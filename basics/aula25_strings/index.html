@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Números não são strings</title>
+  </head>
+  <body>
+    <script>
+      const name = prompt("Digite um nome grande");
+      document.body.innerHTML += `${name} está aprendendo javascript <br />`;
+
+      function firstName(name) {
+        return name.split(" ")[0];
+      }
+
+      document.body.innerHTML += `${firstName(name)} possui ${
+        firstName(name).length
+      } caracteres <br />`;
+      document.body.innerHTML += `A segunda letra do seu nome é ${firstName(
+        name
+      )
+        .charAt(1)
+        .toUpperCase()} <br />`;
+      document.body.innerHTML += `${name.indexOf("a")} <br />`;
+      document.body.innerHTML += `${name.lastIndexOf("a")} <br />`;
+      document.body.innerHTML += `${name.toUpperCase()} <br />`;
+      document.body.innerHTML += `${name.toLowerCase()} <br />`;
+      document.body.innerHTML += `${name.replace(/\w\S*/g, (w) =>
+        w.replace(/^\w/, (c) => c.toUpperCase())
+      )} <br />`;
+      document.body.innerHTML += ` Seu nome é composto por ${name.split(
+        " "
+      )} <br />`;
+      document.body.innerHTML += ` As últimas 3 letras do seu nome são ${name.slice(
+        -3
+      )} <br />`;
+    </script>
+  </body>
+</html>
